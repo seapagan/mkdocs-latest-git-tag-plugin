@@ -8,6 +8,7 @@ packages = [{include = "mkdocs_git_latest_tag_plugin"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+mkdocs = "^1.4.3"
 
 
 [build-system]
