@@ -37,6 +37,7 @@ latest-git-tag = "mkdocs_latest_git_tag_plugin.plugin:LatestGitTagPlugin"
 [tool.poetry.dependencies]
 python = "^3.8.1"
 mkdocs = "^1.4.3"
+gitpython = "^3.1.31"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"
