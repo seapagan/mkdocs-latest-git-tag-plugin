@@ -4,13 +4,38 @@ version = "0.1.0"
 description = "MkDocs plugin to get the latest git tag"
 authors = ["Grant Ramsay <seapagan@gmail.com>"]
 readme = "README.md"
+
+repository = "https://github.com/seapagan/mkdocs-git-latest-tag-plugin"
+homepage = "https://github.com/seapagan/mkdocs-git-latest-tag-plugin"
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Web Environment",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Documentation",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Text Processing :: Markup :: Markdown",
+]
+
 packages = [{include = "mkdocs_git_latest_tag_plugin"}]
 
 [tool.poetry.plugins."mkdocs.plugins"]
 git-latest-tag = "mkdocs_git_latest_tag_plugin.plugin:GitLatestTagPlugin"
 
+[tool.poetry.urls]
+"Pull Requests" = "https://github.com/seapagan/mkdocs-git-latest-tag-plugin/pulls"
+"Bug Tracker" = "https://github.com/seapagan/mkdocs-git-latest-tag-plugin/issues"
+
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8.1"
 mkdocs = "^1.4.3"
 
 [tool.poetry.group.dev.dependencies]
