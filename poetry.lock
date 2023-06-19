@@ -875,6 +875,7 @@ files = [
 
 [package.dependencies]
 snowballstemmer = ">=2.2.0"
+tomli = {version = ">=1.2.3", optional = true, markers = "python_version < \"3.11\" and extra == \"toml\""}
 
 [package.extras]
 toml = ["tomli (>=1.2.3)"]
@@ -1167,6 +1168,7 @@ files = [
 [package.dependencies]
 markdown-it-py = ">=2.2.0"
 pygments = ">=2.13.0,<3.0.0"
+typing-extensions = {version = ">=4.0.0,<5.0", markers = "python_version < \"3.9\""}
 
 [package.extras]
 jupyter = ["ipywidgets (>=7.5.1,<9)"]
@@ -1441,5 +1443,5 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.9"
-content-hash = "a92a852da6e8401e74e885f5f75aaa742fbb60389de399924462795172a92f8e"
+python-versions = "^3.8.1"
+content-hash = "ddde2f21f5077dc3cb59b1721f052b2b4e54ac1aea90a6efe960b7738aa02519"

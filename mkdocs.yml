@@ -1,3 +1,3 @@
 site_name: Test Docs
 plugins:
-  - git-latest-tag
+  - latest-git-tag

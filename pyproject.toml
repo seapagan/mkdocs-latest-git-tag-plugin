@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "mkdocs-git-latest-tag-plugin"
+name = "mkdocs-latest-git-tag-plugin"
 version = "0.1.0"
-description = "MkDocs plugin to get the latest git tag"
+description = "MkDocs plugin to get the latest git tag from the local repository"
 authors = ["Grant Ramsay <seapagan@gmail.com>"]
 readme = "README.md"
 
-repository = "https://github.com/seapagan/mkdocs-git-latest-tag-plugin"
-homepage = "https://github.com/seapagan/mkdocs-git-latest-tag-plugin"
+repository = "https://github.com/seapagan/mkdocs_latest_git_tag_plugin"
+homepage = "https://github.com/seapagan/mkdocs_latest_git_tag_plugin"
 
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -25,14 +25,14 @@ classifiers = [
   "Topic :: Text Processing :: Markup :: Markdown",
 ]
 
-packages = [{include = "mkdocs_git_latest_tag_plugin"}]
+packages = [{include = "mkdocs_latest_git_tag_plugin"}]
 
 [tool.poetry.plugins."mkdocs.plugins"]
-git-latest-tag = "mkdocs_git_latest_tag_plugin.plugin:GitLatestTagPlugin"
+latest-git-tag = "mkdocs_latest_git_tag_plugin.plugin:LatestGitTagPlugin"
 
 [tool.poetry.urls]
-"Pull Requests" = "https://github.com/seapagan/mkdocs-git-latest-tag-plugin/pulls"
-"Bug Tracker" = "https://github.com/seapagan/mkdocs-git-latest-tag-plugin/issues"
+"Pull Requests" = "https://github.com/seapagan/mkdocs_latest_git_tag_plugin/pulls"
+"Bug Tracker" = "https://github.com/seapagan/mkdocs_latest_git_tag_plugin/issues"
 
 [tool.poetry.dependencies]
 python = "^3.8.1"
@@ -46,7 +46,7 @@ flake8-pytest-style = "^1.7.2"
 black = "^23.3.0"
 pep8-naming = "^0.13.3"
 pylint = "^2.17.4"
-pydocstyle = "^6.3.0"
+pydocstyle = {extras = ["toml"], version = "^6.3.0"}
 pre-commit = "^3.3.3"
 bandit = "^1.7.5"
 poethepoet = "^0.20.0"
@@ -64,6 +64,9 @@ faker = "^18.10.1"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+pre = "pre-commit run --all-files"
 
 [tool.flake8]
 exclude = ["__init__.py"]

@@ -5,10 +5,10 @@ from typing import Literal
 from mkdocs.plugins import BasePlugin
 
 
-class GitLatestTagPlugin(BasePlugin):
-    """GitLatestTagPlugin."""
+class LatestGitTagPlugin(BasePlugin):
+    """Class for the 'mkdocs-latest-git-tag-plugin'."""
 
-    PLUGIN_TAG = "git-latest-tag"
+    PLUGIN_TAG = "latest-git-tag"
 
     def on_startup(
         self, command: Literal["build", "gh-deploy", "serve"], **kwargs
