@@ -1,5 +1,7 @@
 # MkDocs Plugin : `latest-git-tag`
 
+[![PyPI version](https://badge.fury.io/py/mkdocs-latest-git-tag-plugin.svg)](https://badge.fury.io/py/mkdocs-latest-git-tag-plugin)
+
 This is a simple [MkDocs](https://www.mkdocs.org/) plugin that just gets the
 most recent `Tag` from the local Git repository and makes it available as a
 markdown tag in the template.
