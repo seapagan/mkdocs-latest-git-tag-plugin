@@ -33,13 +33,13 @@ class LatestGitTagPlugin(BasePlugin):
         this_repo = self.get_repo(page.file.abs_src_path)
 
         try:
-            last_tag = this_repo.tags[0].name
+            last_tag = this_repo.git.tag(sort="creatordate").split("\n")[-1]
         except IndexError:
             last_tag = "No tags found"
 
         markdown = re.sub(
             rf"{{{{(\s)*{self.PLUGIN_TAG}(\s)*}}}}",
-            last_tag,
+            str(last_tag),
             markdown,
             flags=re.IGNORECASE,
         )
