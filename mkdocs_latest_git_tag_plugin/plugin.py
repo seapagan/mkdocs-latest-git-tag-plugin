@@ -33,7 +33,7 @@ class LatestGitTagPlugin(BasePlugin):
         this_repo = self.get_repo(page.file.abs_src_path)
 
         try:
-            last_tag = this_repo.tags[-1].name
+            last_tag = this_repo.tags[0].name
         except IndexError:
             last_tag = "No tags found"
 

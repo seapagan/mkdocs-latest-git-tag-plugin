@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mkdocs-latest-git-tag-plugin"
-version = "0.1.0"
+version = "0.1.1"
 description = "MkDocs plugin to get the latest git tag from the local repository"
 authors = ["Grant Ramsay <seapagan@gmail.com>"]
 readme = "README.md"
