@@ -61,13 +61,18 @@ pytest-asyncio = "^0.21.0"
 pytest-mock = "^3.11.1"
 mock = "^5.0.2"
 faker = "^18.10.1"
+mkdocs-material = "^9.1.16"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poe.tasks]
+lint = "pylint **/*.py"
 pre = "pre-commit run --all-files"
+"docs:serve" = "mkdocs serve -a 0.0.0.0:9000"
+"docs:publish"= "mkdocs gh-deploy"
+"docs:build" = "mkdocs build"
 
 [tool.flake8]
 exclude = ["__init__.py"]

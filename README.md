@@ -4,8 +4,14 @@ This is a simple [MkDocs](https://www.mkdocs.org/) plugin that just gets the
 most recent `Tag` from the local Git repository and makes it available as a
 markdown tag in the template.
 
+The idea behind this is that GitHub uses the `Tag` to name the release and,
+therefore we can use it to display the version of the documentation that
+corresponds to the release.
+
 The Tag is just returned as a string with no formatting applied. If none is
 found, it returns "No Tags found"
+
+There is a [Demo Site](https://seapagan.github.io/mkdocs-latest-git-tag-plugin/)
 
 ## Installation
 
@@ -43,3 +49,16 @@ Version: {{ latest_git_tag }}
 ```
 
 The spaces around the tag are optional and it is case insensitive.
+
+## Configuration
+
+At this time there are no configuration options.
+
+## License
+
+This is released under the MIT License. See the bundled LICENSE file for more
+details.
+
+## TODO
+
+- [ ] Add tests
