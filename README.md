@@ -7,6 +7,8 @@ markdown tag in the template.
 The Tag is just returned as a string with no formatting applied. If none is
 found, it returns "No Tags found"
 
+There is a [Demo Site](https://seapagan.github.io/mkdocs-latest-git-tag-plugin/)
+
 ## Installation
 
 Install the package with pip:
@@ -43,3 +45,12 @@ Version: {{ latest_git_tag }}
 ```
 
 The spaces around the tag are optional and it is case insensitive.
+
+## Configuration
+
+At this time there are no configuration options.
+
+## License
+
+This is released under the MIT License. See the bundled LICENSE file for more
+details.
